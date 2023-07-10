@@ -200,10 +200,10 @@
     </script>
 
 
-    @if(session('success'))
+    @if(session('pdfFileName'))
     <script>
     Toastify({
-        text: "{{ session('success') }}",
+        text: "PDF uploaded Successfully",
         duration: 3000,
         close: true,
         gravity: 'top',
