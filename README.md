@@ -21,7 +21,7 @@ After the PHP dependencies are installed, install the JavaScript dependencies us
 Copy the **.env.example** file and rename it to **.env**: `cp .env.example .env`\
 Open the **.env** file in a text editor and configure the necessary environment variables, such as database connection details, PDF storage path and api urls. 
 
-## Generating Application Key
+## Generate Application Key
 To generate a new application key and update it in your .env file, run: `php artisan key:generate`
 
 ## Migrate the Database
@@ -34,7 +34,9 @@ To start the Vite development server for automatically compiling the assets (CSS
 ## Serve the Application
 You can now run the Laravel application using the built-in development server. Run the following command: `php artisan serve --port=3000`
 
-By default, the application will be accessible at http://localhost:3000. Open your web browser and visit that URL to view the application.
+By default, the application will be accessible at http://localhost:3000. Open your web browser and visit that URL to view the application. You can login using the test credentials:\
+`email: doejohn@gmail.com`\
+`password: 1234567890`
 
 ## Conclusion
 Congratulations! You have successfully set up the application locally.
