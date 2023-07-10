@@ -58,8 +58,8 @@ class InvoiceController extends Controller
 
             $item->invoice_id = $invoice->id;
             $item->item_name = $request->item_details[$index]['name'];
-            $item->quantity = $request->item_details[$index]['unit_price'];
-            $item->unit_price = $request->item_details[$index]['quantity'];
+            $item->quantity = $request->item_details[$index]['quantity'];
+            $item->unit_price = $request->item_details[$index]['unit_price'];
             $item->amount = $request->item_details[$index]['amount'];
 
             $item->save();
