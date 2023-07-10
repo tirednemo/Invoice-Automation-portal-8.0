@@ -1,61 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Invoice-Automation-portal
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This guide is a walk-through of the steps required to run this Laravel application locally. The project uses Laravel Breeze for authentication, Blade templates with Tailwind CSS for the views and Laravel Mix to bundle assets.
 
-## About Laravel
+## Prerequisites
+- PHP (7.3 or higher)
+- Laravel (8.0 or higher)
+- Composer
+- Node.js (16 or higher)
+- MySQL or any other compatible database management system
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Clone the Repository
+Start by cloning the project repository from GitHub onto local machine.\
+Open terminal and navigate to the directory where you want to clone the repository, then run: `git clone https://github.com/tirednemo/Invoice-Automation-portal-8.0.git`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Install Dependencies
+Once the repository is cloned, navigate into the project directory and install the PHP dependencies using Composer: `composer install`\
+After the PHP dependencies are installed, install the JavaScript dependencies using NPM: `npm install`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Configure the Environment
+Copy the **.env.example** file and rename it to **.env**: `cp .env.example .env`\
+Open the **.env** file in a text editor and configure the necessary environment variables, such as database connection details, PDF storage path and api urls. 
 
-## Learning Laravel
+## Generating Application Key
+To generate a new application key and update it in your .env file, run: `php artisan key:generate`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Migrate the Database
+Before running the application, you need to migrate the database tables. Run: `php artisan migrate`\
+To auto populate the tables, run: `php artisan db:seed`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Build Assets
+To start the Vite development server for automatically compiling the assets (CSS and JavaScript files), run the following command: `npm run dev`
 
-## Laravel Sponsors
+## Serve the Application
+You can now run the Laravel application using the built-in development server. Run the following command: `php artisan serve --port=3000`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+By default, the application will be accessible at http://localhost:3000. Open your web browser and visit that URL to view the application.
 
-### Premium Partners
+## Conclusion
+Congratulations! You have successfully set up the application locally.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+For more information about Laravel and Laravel Breeze, refer to the official documentation:
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* [Laravel](https://laravel.com/docs)
+* [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)
