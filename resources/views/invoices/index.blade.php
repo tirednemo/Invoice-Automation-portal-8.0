@@ -2,9 +2,11 @@
     <div class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
 
         <div class="flow-root">
-            <x-primary-button class="mt-3 float-right">
-                <a href="{{ route('invoices.create') }}">{{ __('Add Invoice') }}</a>
-            </x-primary-button>
+            <a href="{{ route('invoices.create') }}">
+                <x-primary-button class="mt-3 float-right">
+                    {{ __('Add Invoice') }}
+                </x-primary-button>
+            </a>
         </div>
 
         <div class="mt-5 bg-white shadow-sm rounded-lg divide-y">
@@ -60,9 +62,10 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap">
-                            <button class="bg-gray-100 py-2 px-2 rounded">
-                                <a href="{{ route('invoices.show', ['invoice' => $invoice->id]) }}">{{ __('Details') }}</a>
-                            </button>
+                            <a href="{{ route('invoices.show', ['invoice' => $invoice->id]) }}">
+                                <button class="bg-gray-100 py-2 px-2 rounded">{{ __('Details') }}
+                                </button>
+                            </a>
                         </td>
                     </tr>
                     @endforeach
